@@ -1,0 +1,21 @@
+.wframe {
+border: 1px;
+border-color: #AAA;
+border-style: dashed;
+}
+
+.raygan_osbar {
+display: block;
+width: 100%;
+height: 5em;
+}
+
+.raygan_navbar {
+display: block;
+width: 100%;
+height: 5em;
+}
+
+.dev-hide {
+display: none;
+}

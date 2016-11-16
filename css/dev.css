@@ -1,0 +1,32 @@
+
+.raygancom-pic-open-dev {
+	margin: 1em;
+	height: 10em;
+	width: 6.666em;
+       -webkit-transition: height 2s, width 2s, margin 2s;
+	transition: height 2s, width 2s, margin 2s;
+}
+
+.raygancom-pic-open:hover {
+	height: 5em;
+	width: 3.333em;
+	margin:0px;
+}
+.raygancom-nav-menu-area:hover {
+	display: none;
+}
+
+.raygancom-nav-area-dev {
+       -webkit-transition: height 2s, width 2s, border-radius 2s;
+	transition: width 2s, height 2s, border-radius 2s;
+}
+.raygancom-nav-area:hover {
+	width: 2em;
+	height: 2em;
+	border-radius: .4em;
+}
+.raygancom-results-frontpage:hover {
+position:relative;
+top:1em;
+padding:0;
+}
