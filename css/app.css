@@ -14,7 +14,7 @@
   background-color: white;
 }
 .raygancom-os-area {
-  padding: .5em;
+  padding: 0em .5em .5em .5em;
   height: 5em;
   /*
 	background: white;
@@ -47,7 +47,7 @@
 }
 .raygancom-pic-open {
   position: absolute;
-  margin: 1em;
+  margin: .3em 1em 1em 1em;
   height: 10em;
   width: 6.666em;
   -webkit-transition: height 2s, width 2s, margin 2s;

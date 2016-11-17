@@ -1,6 +1,9 @@
 function toggleOpen( object ) {
-	object.style.height = "20em";
-	object.raygancom.toggleOpenState
+	if( object.style.height == "10em" ) {
+		object.style.height = "15em";
+	}else{
+		object.style.height = "10em";
+	}
 }
 
 function setResults ( content_html ) {
