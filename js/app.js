@@ -1,8 +1,13 @@
 function toggleOpen( object ) {
-	if( object.style.height == "10em" ) {
-		object.style.height = "15em";
+	if( object.parentElement.style.height == "10em" )
+	{
+		if( object.scrollHeight > object.parentElement.scrollHeight - 20 ) {
+			object.parentElement.style.height = "20em";
+		}else{
+			object.parentElement.style.height = "15em";
+		}
 	}else{
-		object.style.height = "10em";
+		object.parentElement.style.height = "10em";
 	}
 }
 
@@ -13,6 +18,7 @@ function setResults ( content_html ) {
 function navTo ( filepath ) {
 	var cgipath = "dirtydir.cgi?" + filepath;
 	$.get( cgipath, setResults );
+	window.scrollTo(0,0);
 }
 
 function navToFrag ( url ) {
@@ -30,8 +36,8 @@ function navToFrag ( url ) {
 	navTo( filepath );
 }
 
+
 navToFrag( document.URL );
 
 
-/* $.get("dirtydir.cgi?fs/frontpg/", setResults ); */
 
