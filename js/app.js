@@ -1,18 +1,36 @@
-function toggleOpen( object ) {
-	if( object.parentElement.style.height == "10em" )
+/*  raygancom/js/app.js 
+ */
+
+function toggleOpen( object )
+{
+	var thisStyle = window.getComputedStyle( object );
+	var parStyle = window.getComputedStyle( object.parentElement );
+
+	console.log( "parStyle.height: " + parStyle.height );
+	console.log( "thisStyle.height: " + thisStyle.height );
+}
+
+function toggleParOpen( object )
+{
+	var thisStyle = window.getComputedStyle( object );
+	var parStyle = window.getComputedStyle( object.parentElement );
+
+	if( thisStyle.height > parStyle.height )
 	{
-		if( object.scrollHeight > object.parentElement.scrollHeight - 20 ) {
-			object.parentElement.style.height = "20em";
-		}else{
-			object.parentElement.style.height = "15em";
+		object.raygancom_save_height = parStyle.height;
+		object.parentElement.style.height = thisStyle.height;
+	} else {
+		if( object.raygancom_save_height != "" )
+		{
+			object.parentElement.style.height =
+				object.raygancom_save_height;
 		}
-	}else{
-		object.parentElement.style.height = "10em";
 	}
 }
 
 function setResults ( content_html ) {
 	document.getElementById('raygancom_resultlist').innerHTML = content_html;
+	/* maybe init innerHTML style here */
 }
 
 function navTo ( filepath ) {

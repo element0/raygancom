@@ -179,10 +179,9 @@
 .raygancom-list-item-wrapper {
   padding: 1em 1em 1em 0;
   height: 10em;
+  overflow: hidden;
 }
 .raygancom-list-item {
-  height: 100%;
-  overflow: hidden;
   margin: 1em 1.5em 0 1em;
   /* text-align: justify; */
 }

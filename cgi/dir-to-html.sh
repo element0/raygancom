@@ -26,15 +26,15 @@ function produce_dir_foot_html {
 }
 
 function produce_dirent_head_html {
-	echo "  <div class=\"raygancom-list-item-wrapper\">"
-	echo "  <div class=\"raygancom-list-item\" id=\"$1\"  onclick=\"toggleOpen(this)\">"
+	echo "  <div class=\"raygancom-list-item-wrapper\" onclick=\"toggleOpen(this)\">"
+	echo "  <div class=\"raygancom-list-item\" id=\"$1\"  onclick=\"toggleParOpen(this)\">"
 }
 
 function produce_dirent_foot_html {
 	echo "  </div>"
-	echo "  <div class=\"raygancom-list-item-grad\">"
-	echo "    <div class=\"list-item-more-button dev-hide\">more</div>"
-	echo "  </div>"
+	echo "    <div class=\"raygancom-list-item-grad\">"
+	echo "      <div class=\"list-item-more-button dev-hide\">more</div>"
+	echo "    </div>"
 	echo "  </div>"
 	echo "  <div class=\"raygancom-list-divider\"></div>"
 }
