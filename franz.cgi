@@ -6,9 +6,9 @@ echo "Content: text/html
 
 if [ -e "$1" ]
 then
-	./cgi/dir-to-html.sh "$1"
+	./bin/dir-to-html.sh "$1"
 else
-	echo "dirtydir: error"
+	echo "franz.cgi: error"
 fi
 echo "
 "

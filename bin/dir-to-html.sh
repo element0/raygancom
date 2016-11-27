@@ -1,6 +1,13 @@
 #!/bin/bash
 
-source etc/dirtydir.conf
+CONFIGFILE="etc/franz.conf"
+
+if [ -e "$CONFIGFILE" ]
+then
+	source "$CONFIGFILE"
+fi
+
+DIVINER="./bin/divine"
 
 function produce_dir_head_html {
 	echo "<div class=\"$DIRCLASS\" id=\"$1\">"
@@ -14,6 +21,10 @@ function produce_dir_head_html {
 	then
 		cat "$1/_header.html"
 	fi
+	if [ -f "$1/_header.div" ]
+	then
+		"$DIVINER" "$1/_header.div"
+	fi
 
 	if [ -n "$DIRHEAD_AFT" ]
 	then
@@ -26,15 +37,16 @@ function produce_dir_foot_html {
 }
 
 function produce_dirent_head_html {
-	echo "  <div class=\"raygancom-list-item-wrapper\" onclick=\"toggleOpen(this)\">"
-	echo "  <div class=\"raygancom-list-item\" id=\"$1\"  onclick=\"toggleParOpen(this)\">"
+	echo "  <div class=\"raygancom-list-item-wrapper\">"
+	echo -n "  <div class=\"raygancom-list-item\" id=\"$1\""
+	echo "onclick=\"toggleParOpen(this)\">"
 }
 
 function produce_dirent_foot_html {
 	echo "  </div>"
-	echo "    <div class=\"raygancom-list-item-grad\">"
-	echo "      <div class=\"list-item-more-button dev-hide\">more</div>"
-	echo "    </div>"
+#       echo "    <div class=\"raygancom-list-item-grad\">"
+#	echo "      <div class=\"list-item-more-button dev-hide\">more</div>"
+#	echo "    </div>"
 	echo "  </div>"
 	echo "  <div class=\"raygancom-list-divider\"></div>"
 }
@@ -43,7 +55,12 @@ function dirent-to-html {
 	if [ -f "$1" ]
 	then
 		produce_dirent_head_html "$1"
-		cat "$1"
+		if [ "${1/*./}" == "div" ]
+		then
+			"$DIVINER" "$1"
+		else
+			cat "$1"
+		fi
 		produce_dirent_foot_html
         elif [ -d "$1" ]
 	then

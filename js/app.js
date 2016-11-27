@@ -12,6 +12,7 @@ function toggleOpen( object )
 
 function toggleParOpen( object )
 {
+	console.log(object.id);
 	var thisStyle = window.getComputedStyle( object );
 	var parStyle = window.getComputedStyle( object.parentElement );
 
@@ -34,7 +35,7 @@ function setResults ( content_html ) {
 }
 
 function navTo ( filepath ) {
-	var cgipath = "dirtydir.cgi?" + filepath;
+	var cgipath = "franz.cgi?" + filepath;
 	$.get( cgipath, setResults );
 	window.scrollTo(0,0);
 }

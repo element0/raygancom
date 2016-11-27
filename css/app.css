@@ -1,7 +1,11 @@
+.wframe {
+  border: 1px;
+  border-color: #AAA;
+  border-style: dashed;
+}
 .raygancom-body {
   font-size: 10pt;
   font-family: 'Hind Vadodara', sans-serif;
-  font-weight: 300;
   margin: 0px;
   padding: 0px;
   background-color: #965096;
@@ -11,6 +15,8 @@
 }
 .raygancom-content {
   margin: auto;
+  height: auto;
+  padding-bottom: 6.1em;
   max-width: 40em;
   background-color: white;
 }
@@ -22,34 +28,39 @@
 	background: linear-gradient(#BBB, #EEE, white, white);
 	*/
 }
+#raygancom_about {
+  top: 0;
+}
 .raygancom-about-area {
   display: inline-block;
-  position: absolute;
+  position: relative;
+  width: 100%;
+  height: 10em;
   padding: 0;
   margin: 0;
+  overflow: hidden;
 }
 .raygancom-pic-area {
   display: inline-block;
   position: relative;
-  height: 10em;
+  top: 1.5em;
+  height: 6.666em;
   width: 6.666em;
+  margin: 5px;
+  border: solid #FFF .5em;
 }
 .raygancom-pic-decoration {
-  display: inline-block;
   position: relative;
-  height: 11em;
   border: solid #A00;
   border-width: 0 0 4px 0;
   padding: 0;
-  margin: 0;
+  margin: 5px;
 }
 .raygancom-pic {
   border: .5px solid #DDD;
 }
 .raygancom-pic-open {
   position: absolute;
-  margin: .3em 1em 1em 1em;
-  height: 10em;
   width: 6.666em;
   -webkit-transition: height 2s, width 2s, margin 2s;
   transition: height 2s, width 2s, margin 2s;
@@ -59,6 +70,15 @@
   height: 5em;
   width: 3.333em;
   margin: 0px;
+}
+.raygancom-artsplash {
+  display: inline-block;
+  position: absolute;
+  left: 1em;
+  width: 100%;
+}
+.raygancom-artsplash-img {
+  height: 12em;
 }
 .raygancom-contact-area {
   display: inline-block;
@@ -71,6 +91,8 @@
   font-family: 'Permanent Marker', cursive;
   font-size: 12pt;
   font-style: italic;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 20px #FFF;
 }
 .raygancom-link-menu-area {
   font-size: 8pt;
@@ -109,7 +131,6 @@
   opacity: 0.8;
 }
 .raygancom-ctrl-menu-area {
-  font-size: 10pt;
   position: absolute;
   right: .2em;
   margin-right: 0.5em;
@@ -149,10 +170,10 @@
 }
 .raygancom-nav-area {
   display: block;
-  font-size: 10pt;
+  font-size: 9pt;
   position: fixed;
   right: .8em;
-  top: 10em;
+  top: 11.8em;
   padding-top: .2em;
   padding-bottom: .2em;
   border-radius: .5em;
@@ -172,29 +193,67 @@
 .raygancom-results-frontpage {
   z-index: 0;
   position: relative;
-  top: 7em;
-  height: 11in;
+  top: 5.8em;
+  height: auto;
   transition: top 2s;
+}
+/* -- mockup alert -- */
+.raygancom-mockup-alert {
+  border-radius: .8em;
+  background-color: #E54;
+  padding: .5em 1em .5em 1em;
+  margin-top: 2em;
+  border-style: groove;
+  border-color: #D43;
+  border-width: 1px;
+  color: #FFFAFA;
+}
+#raygancom_credits {
+  height: 3em;
+  padding: 1em;
+  text-align: center;
+  font-size: 8pt;
+  color: #FFF;
+}
+/* -- 'franz' cgi output --*/
+.franz-list {
+  display: inline-block;
+}
+.list-item-title {
+  font-weight: bold;
+  font-size: 1.1em;
+  font-family: 'Raleway', sans-serif;
+  margin: .3em;
+}
+.list-item-description {
+  font-size: 1em;
+}
+.list-item-thumb {
+  float: left;
+  width: 6.666em;
+  height: 6.666em;
+  margin: 0 1em 0 0;
+}
+.raygancom-list-header {
+  padding: 0;
+  margin: 0;
+}
+.raygancom-frontpage-list-header {
+  margin-left: 1.3em;
+  margin-right: 7em;
+  margin-bottom: 1.3em;
+  text-align: justify;
 }
 .raygancom-list-item-wrapper {
   padding: 1em 1em 1em 0;
-  height: 10em;
+  min-height: 8em;
+  max-height: 12em;
+  /* height: 10em; */
   overflow: hidden;
 }
 .raygancom-list-item {
   margin: 1em 1.5em 0 1em;
   /* text-align: justify; */
-}
-.list-item-thumb {
-  float: left;
-  width: 7em;
-  height: 7em;
-  margin: 0 1em 0 0;
-}
-.list-item-title {
-  font-weight: bold;
-  font-size: 1.3em;
-  font-family: 'Raleway', sans-serif;
 }
 .raygancom-list-item-grad {
   text-align: center;
@@ -208,6 +267,12 @@
 	*/
   z-index: 5;
 }
+.raygancom-list-divider {
+  margin-left: 1em;
+  border-style: none none solid none;
+  border-width: 0 0 1px 0;
+  border-color: #DDD;
+}
 .list-item-more-button {
   font-size: 8pt;
   color: #55A;
@@ -215,31 +280,4 @@
   width: 100%;
   text-align: center;
   bottom: 0em;
-}
-.raygancom-list-divider {
-  margin-left: 1em;
-  border-style: none none solid none;
-  border-width: 0 0 1px 0;
-  border-color: #DDD;
-}
-.raygancom-list-header {
-  padding: 0;
-}
-/* -- mockup alert -- */
-.raygancom-mockup-alert {
-  border-radius: .8em;
-  background-color: #E54;
-  padding: .5em 1em .5em 1em;
-  margin-top: 2em;
-  border-style: groove;
-  border-color: #D43;
-  border-width: 1px;
-  color: #FFFAFA;
-}
-/* -- front page -- */
-.raygancom-frontpage-list-header {
-  margin-left: 1.3em;
-  margin-right: 7em;
-  margin-bottom: 1.3em;
-  text-align: justify;
 }
