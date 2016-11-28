@@ -39,7 +39,8 @@ function produce_dir_foot_html {
 function produce_dirent_head_html {
 	echo "  <div class=\"raygancom-list-item-wrapper\">"
 	echo -n "  <div class=\"raygancom-list-item\" id=\"$1\""
-	echo "onclick=\"toggleParOpen(this)\">"
+#	echo "onclick=\"toggleParOpen(this)\">"
+	echo ">"
 }
 
 function produce_dirent_foot_html {
