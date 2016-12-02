@@ -39,7 +39,7 @@ raygancom_about
     .raygancom-about-area
 	$artsplash
 	.raygancom-pic-area
-	  <img src="img/raygan_nice_cropsqr.png" class="raygancom-pic raygancom-pic-open" />
+	  <img src="img/raygan_cool_cropsqr.png" class="raygancom-pic raygancom-pic-open" />
         .raygancom-contact-area
 	  .raygancom-contact-email
 	    <a href="mailto:raygan@raygan.com" class="raygancom-link">
