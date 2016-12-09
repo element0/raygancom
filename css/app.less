@@ -12,7 +12,11 @@
 @abelfont: 'Abel', sans-serif;
 @hindvadfont: 'Hind Vadodara', sans-serif;
 
+/* COLOR PALLET */
+
 @offwhite: #EEEEEE;
+@glow_yellow: #FF0;
+@black: #000;
 
 @mainfontsize: 10pt;
 
@@ -153,13 +157,22 @@ display: inline-block;
 }
 
 .raygancom-link {
-	color: black;
 	text-decoration: none;
 }
 
-.raygancom-link-white {
+.raygancom-nav-link-dormant {
 	.raygancom-link;
 	color: @offwhite;
+}
+
+.raygancom-nav-link-active {
+	.raygancom-link;
+	color: @glow_yellow;
+}
+
+.raygancom-link-black {
+	.raygancom-link;
+	color: @black;
 }
 
 .raygancom-link-white:visited {

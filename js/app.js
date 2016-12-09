@@ -40,19 +40,44 @@ function navTo ( filepath ) {
 	window.scrollTo(0,0);
 }
 
+function navResetActive ( ) {
+	document.getElementById('nav_films').classList.remove("raygancom-nav-link-active");
+	document.getElementById('nav_softw').classList.remove("raygancom-nav-link-active");
+}
+
+function navSetActive( nav_link_id ) {
+	document.getElementById( nav_link_id ).classList.add("raygancom-nav-link-active");
+}
+
+function navToggle ( object, filepath ) {
+	navResetActive();
+	object.classList.toggle("raygancom-nav-link-active");
+	var cgipath = "franz.cgi?" + filepath;
+	$.get( cgipath, setResults );
+	window.scrollTo(0,0);
+}
+
 function navToFrag ( url ) {
-	frag = "frontpg";
+	var frag = "frontpg";
+	var nav_link_id = "";
+
 	var i = url.indexOf( "#" ) + 1;
 	if( i != "" ) {
-		var frag = url.substr( i );
+		frag = url.substr( i );
 	}
-	if( frag == "films" || frag == "frontpg" ) {
+	if( frag == "films" ) {
+		nav_link_id = 'nav_films';
+	}else if( frag == "frontpg" ) {
+		nav_link_id = 'nav_softw';
 	}else{
 		frag = "frontpg";
+		nav_link_id = 'nav_softw';
 	}
 
 	var filepath = "fs/" + frag;
 	navTo( filepath );
+	navResetActive();
+	navSetActive( nav_link_id );
 }
 
 

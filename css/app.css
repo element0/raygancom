@@ -1,3 +1,4 @@
+/* COLOR PALLET */
 .wframe {
   border: 1px;
   border-color: #AAA;
@@ -108,13 +109,19 @@
   display: inline-block;
 }
 .raygancom-link {
-  color: black;
   text-decoration: none;
 }
-.raygancom-link-white {
-  color: black;
+.raygancom-nav-link-dormant {
   text-decoration: none;
   color: #EEEEEE;
+}
+.raygancom-nav-link-active {
+  text-decoration: none;
+  color: #FF0;
+}
+.raygancom-link-black {
+  text-decoration: none;
+  color: #000;
 }
 .raygancom-link-white:visited {
   color: #EEEEEE;

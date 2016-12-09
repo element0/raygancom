@@ -42,14 +42,14 @@ raygancom_about
 	  <img src="img/raygan_cool_cropsqr.png" class="raygancom-pic raygancom-pic-open" />
         .raygancom-contact-area
 	  .raygancom-contact-email
-	    <a href="mailto:raygan@raygan.com" class="raygancom-link">
+	    <a href="mailto:raygan@raygan.com" class="raygancom-link-black">
 	      "raygan@raygan.com
 	  .raygancom-link-menu-area
             .raygancom-link-menu-item
-	      <a href="http://www.imdb.com/name/nm1580289" class="raygancom-link">
+	      <a href="http://www.imdb.com/name/nm1580289" class="raygancom-link-black">
 	        "imdb
 	    .raygancom-link-menu-item
-	      <a href="https://github.com/element0/" class="raygancom-link">
+	      <a href="https://github.com/element0/" class="raygancom-link-black">
 	        "github
 
 
@@ -60,10 +60,10 @@ artsplash .raygancom-artsplash
 raygancom_navbar.raygancom-nav-area
     .raygancom-nav-menu-area
         <div class="raygancom-ctrl-menu-item raygancom-lowerline" onclick='navTo("fs/films")'>
-	    <a href="#films" onclick='navTo("fs/films")' class="raygancom-link-white">
+	    <a href="#films" onclick='navToggle(this, "fs/films")' class="raygancom-nav-link-dormant" id="nav_films">
 	        "Films
         <div class="raygancom-ctrl-menu-item" onclick='navTo("fs/frontpg")'>
-	    <a href="#softw" onclick='navTo("fs/frontpg")' class="raygancom-link-white">
+	    <a href="#softw" onclick='navToggle(this, "fs/frontpg")' class="raygancom-nav-link-dormant" id="nav_softw">
 	        "Softw
 
 
