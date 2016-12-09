@@ -1,0 +1,5 @@
+<a href="https://github.com/element0/dirty">
+    <img src="img/franz_thumb.png" class="list-item-thumb" />
+<div class="list-item-title">
+    "Franz Lists
+"Recursively expands a directory and its entries into a nested list.  (Used to present the content on raygan.com)

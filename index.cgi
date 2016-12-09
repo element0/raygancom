@@ -59,11 +59,11 @@ artsplash .raygancom-artsplash
 
 raygancom_navbar.raygancom-nav-area
     .raygancom-nav-menu-area
-        <div class="raygancom-ctrl-menu-item raygancom-lowerline" onclick='navTo("fs/films")'>
-	    <a href="#films" onclick='navToggle(this, "fs/films")' class="raygancom-nav-link-dormant" id="nav_films">
+        <div class="raygancom-ctrl-menu-item raygancom-lowerline" onclick='navToggle("nav_films", "films");'>
+	    <a href="#films" onclick='navToggle("nav_films", "films")' class="raygancom-nav-link-dormant" id="nav_films">
 	        "Films
-        <div class="raygancom-ctrl-menu-item" onclick='navTo("fs/frontpg")'>
-	    <a href="#softw" onclick='navToggle(this, "fs/frontpg")' class="raygancom-nav-link-dormant" id="nav_softw">
+        <div class="raygancom-ctrl-menu-item" onclick='navToggle("nav_softw", "softw")'>
+	    <a href="#softw" onclick='navToggle("nav_softw", "softw")' class="raygancom-nav-link-dormant" id="nav_softw">
 	        "Softw
 
 

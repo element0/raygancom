@@ -49,10 +49,11 @@ function navSetActive( nav_link_id ) {
 	document.getElementById( nav_link_id ).classList.add("raygancom-nav-link-active");
 }
 
-function navToggle ( object, filepath ) {
+function navToggle ( nav_link_id, filepath ) {
 	navResetActive();
-	object.classList.toggle("raygancom-nav-link-active");
-	var cgipath = "franz.cgi?" + filepath;
+	navSetActive( nav_link_id );
+	window.location.assign( "#" + filepath );
+	var cgipath = "franz.cgi?" + "fs/" + filepath;
 	$.get( cgipath, setResults );
 	window.scrollTo(0,0);
 }
