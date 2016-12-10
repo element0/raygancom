@@ -62,6 +62,9 @@ raygancom_navbar.raygancom-nav-area
         <div class="raygancom-ctrl-menu-item raygancom-lowerline" onclick='navToggle("nav_films", "films");'>
 	    <a href="#films" onclick='navToggle("nav_films", "films")' class="raygancom-nav-link-dormant" id="nav_films">
 	        "Films
+        <div class="raygancom-ctrl-menu-item raygancom-lowerline" onclick='navToggle("nav_illus", "illus")'>
+	    <a href="#illus" onclick='navToggle("nav_illus", "illus")' class="raygancom-nav-link-dormant" id="nav_illus">
+	        "Illus
         <div class="raygancom-ctrl-menu-item" onclick='navToggle("nav_softw", "softw")'>
 	    <a href="#softw" onclick='navToggle("nav_softw", "softw")' class="raygancom-nav-link-dormant" id="nav_softw">
 	        "Softw

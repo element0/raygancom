@@ -43,6 +43,7 @@ function navTo ( filepath ) {
 function navResetActive ( ) {
 	document.getElementById('nav_films').classList.remove("raygancom-nav-link-active");
 	document.getElementById('nav_softw').classList.remove("raygancom-nav-link-active");
+	document.getElementById('nav_illus').classList.remove("raygancom-nav-link-active");
 }
 
 function navSetActive( nav_link_id ) {
@@ -59,7 +60,7 @@ function navToggle ( nav_link_id, filepath ) {
 }
 
 function navToFrag ( url ) {
-	var frag = "frontpg";
+	var frag = "films";
 	var nav_link_id = "";
 
 	var i = url.indexOf( "#" ) + 1;
@@ -68,8 +69,8 @@ function navToFrag ( url ) {
 	}
 	if( frag == "films" ) {
 		nav_link_id = 'nav_films';
-	}else if( frag == "frontpg" ) {
-		nav_link_id = 'nav_softw';
+	}else if( frag == "illus" ) {
+		nav_link_id = 'nav_illus';
 	}else{
 		frag = "frontpg";
 		nav_link_id = 'nav_softw';
