@@ -80,5 +80,7 @@ raygancom_credits
     "DreamBoy Software
 
 javascripts
+    <script src="js/vendor/angular.min.js">
     <script src="js/vendor/jquery.js">
-    <script src="js/app.js">
+    <script src="js/app.js"> 
+    
