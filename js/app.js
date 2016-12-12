@@ -1,5 +1,7 @@
-/*  raygancom/js/app.js 
+/**  raygancom/js/app.js 
+     date: pre 2016/12/12
  */
+
 
 function toggleOpen( object )
 {

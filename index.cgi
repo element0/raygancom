@@ -1,23 +1,28 @@
 #!/usr/local/bin/divine
 
 <!doctype html>
-<html>
+<html ng-app="raygancom">
   <head>
-    <meta charset="utf-8">
+    <script src="js/vendor/angular.min.js">
+	<script src="js/vendor/angular-resource.min.js">
+	<script src="js/vendor/angular-route.min.js">
+    '<meta charset="utf-8">
+	'<base href="">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, intial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Permanent+Marker|Raleway:300|Hind+Vadodara:300">
-    <link rel="stylesheet" href="css/app.css">
-    <link rel="stylesheet" href="css/raygandev.css">
+    '<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Permanent+Marker|Raleway:300|Hind+Vadodara:300">
+    '<link rel="stylesheet" href="css/app.css">
+    '<link rel="stylesheet" href="css/raygandev.css">
   <body class="raygancom-body">
     $raygancom_site
 
 
 raygancom_site
-    raygancom_top_of_page
-    $raygancom_content
-    $raygancom_credits
-    $javascripts
+	<div ng-controller="RaygancomController">
+		raygancom_top_of_page
+		$raygancom_content
+		$raygancom_credits
+		$javascripts
     
 raygancom_content .raygancom-content
         $raygancom_os
@@ -59,20 +64,13 @@ artsplash .raygancom-artsplash
 
 raygancom_navbar.raygancom-nav-area
     .raygancom-nav-menu-area
-        <div class="raygancom-ctrl-menu-item raygancom-lowerline" onclick='navToggle("nav_films", "films");'>
-	    <a href="#films" onclick='navToggle("nav_films", "films")' class="raygancom-nav-link-dormant" id="nav_films">
-	        "Films
-        <div class="raygancom-ctrl-menu-item raygancom-lowerline" onclick='navToggle("nav_illus", "illus")'>
-	    <a href="#illus" onclick='navToggle("nav_illus", "illus")' class="raygancom-nav-link-dormant" id="nav_illus">
-	        "Illus
-        <div class="raygancom-ctrl-menu-item" onclick='navToggle("nav_softw", "softw")'>
-	    <a href="#softw" onclick='navToggle("nav_softw", "softw")' class="raygancom-nav-link-dormant" id="nav_softw">
-	        "Softw
-
-
+		<table>
+			<div ng-repeat="nav_item in nav" class="{{navSetItemStyle($last)}}">
+				<a href="{{'#!/' + nav_item.name}}" class="{{navSetActive(nav_item.name)}}" id="nav_{{nav_item.name}}">{{nav_item.title}}
 	
 
-raygancom_resultlist.raygancom-results-frontpage
+raygancom_resultlist .raygancom-results-frontpage
+    <div ng-view>
 
 
 raygancom_credits
@@ -80,7 +78,5 @@ raygancom_credits
     "DreamBoy Software
 
 javascripts
-    <script src="js/vendor/angular.min.js">
-    <script src="js/vendor/jquery.js">
-    <script src="js/app.js"> 
+    <script src="js/app-ng.js"> 
     
