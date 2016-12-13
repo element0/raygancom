@@ -32,8 +32,7 @@ raygancom_content .raygancom-content
 raygancom_os
     .raygancom-os-area
         $raygancom_about
-
-        $artsplash
+		.raygancom-content-top-shadow
     
         $raygancom_ctrl
 
@@ -56,7 +55,6 @@ raygancom_about
 	    .raygancom-link-menu-item
 	      <a href="https://github.com/element0/" class="raygancom-link-black">
 	        "github
-
 
 artsplash .raygancom-artsplash
     <img src="img/snowscape_crop_s25.png" class="raygancom-artsplash-img"/>    
