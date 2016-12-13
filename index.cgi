@@ -1,4 +1,4 @@
-#!/usr/local/bin/divine
+#!bin/divine
 
 <!doctype html>
 <html ng-app="raygancom">

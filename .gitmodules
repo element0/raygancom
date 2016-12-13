@@ -1,0 +1,3 @@
+[submodule "dep/divine"]
+	path = dep/divine
+	url = https://github.com/element0/divine
