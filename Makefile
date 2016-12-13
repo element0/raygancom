@@ -2,7 +2,7 @@
 all:	deps raygancom
 
 deps:
-	git submodule update --remote
+	git submodule update --init --recursive
 
 raygancom: divine
 	cp dep/divine/out/divine bin/divine
